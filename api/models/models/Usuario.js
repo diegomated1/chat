@@ -10,7 +10,11 @@ export const Usuario = db.define('usuario', {
     usuario: DataTypes.STRING,
     nombre: DataTypes.STRING,
     correo: DataTypes.STRING,
-    contraseña: DataTypes.STRING
+    contraseña: DataTypes.STRING,
+    logged: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    }
 },{
     freezeTableName: true,
     timestamps: false

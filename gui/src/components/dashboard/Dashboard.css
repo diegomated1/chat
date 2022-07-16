@@ -1,0 +1,660 @@
+
+/*#region MenuUsuario */
+
+.UsuarioOptions{
+    position: sticky;
+    width: 450px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #2A4AA7;
+}
+
+    .UsuarioOptions-icon{
+        height: 100%;
+        width: 15%;
+        float: left;
+    }
+
+        .Usuario-icon{
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: 3.5px;
+            margin-left: calc(50% - 20px);
+            background-color: #AEE3EE;
+        }
+
+    .UsuarioOptions-info-usuario{
+        height: 100%;
+        width: 70%;
+        float: left;
+    }
+
+        .UsuarioOptions-nombre{
+            width: 100%;
+            height: 50%;
+        }
+
+            .Usuario-nombre{
+                float: left;
+                font-size: larger;
+                margin-left: 20px;
+            }
+
+        .UsuarioOptions-usuario{
+            width: 100%;
+            height: 50%;
+        }
+
+            .Usuario-usuario{
+                float: left;
+                font-size: small;
+                margin-left: 30px;
+            }
+
+    .UsuarioOptions-opciones{
+        height: 100%;
+        width: 15%;
+        float: right;
+        margin: 0px;
+    }
+
+        .Usuario-opciones{
+            width: 40px;
+            height: 40px;
+            margin-top: 3.5px;
+            margin-left: calc(50% - 20px);
+        }
+
+            .btn-Usuario-opciones{
+                width: 100%;
+                height: 100%;
+                border: 0.5px solid black;
+                background-color: #5498A7;
+            }
+
+            .btn-Usuario-opciones:hover{
+                background-color: #AEE3EE;
+            }
+
+    .UsuarioOptions-menu-opciones{
+        z-index: 1;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 2.5%;
+        left: calc(100% - 201px);
+        top: 110%;
+        background-color: #5498A7;
+    }
+        .menu-opciones-hr{
+            position: absolute;
+            width: 90%;
+            border: none;
+            border-bottom: 1px solid black;
+            top: 130px;
+            left: 5%;
+        }
+
+        .menu-opciones-opciones{
+            width: 100%;
+            height: 70%;
+        }
+
+        .menu-opciones-cerrar-sesion{
+            width: 100%;
+            height: 30%;
+        }
+
+            .btn-cerrar-sesion{
+                width: 80%;
+                height: 80%;
+                margin-top: 5px;
+                border: none;
+                border-radius: 6px;
+                background: transparent;
+            }
+
+            .btn-cerrar-sesion:hover{
+                background-color: #427681;
+            }
+
+/*#endregion MenuUsuario */
+
+
+/*#region MenuServidores*/
+
+
+.MenuServidores{
+    position: sticky;
+    width: 67.5px;
+    height: 751px;
+    border: 1px solid black;
+    border-top: none;
+    float: left;
+}
+
+    .MenuServidores-servidores{
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow: scroll;
+        background-color: #0D387A;
+    }
+
+    .MenuServidores-servidores::-webkit-scrollbar{
+        display: none;
+    }
+        .MenuServidores-lista-servidores{
+            width: 100%;
+            height: 100%;
+            list-style-type: none;
+            margin-top: 0px;
+            padding-left: 0px;
+        }
+
+            .MenuServidores-icon-servidores{
+                width: 100%;
+                height: 67.5px;
+            }
+
+                .servidor-icon{
+                    position: relative;
+                    width: 42px;
+                    height: 42px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    top: 11px;
+                    margin-left: 0px;
+                    background-color: #0D5E7A;
+                }
+
+                .servidor-icon:hover{
+                    background-color: #50B0B5;
+                }
+
+    .MenuServidores-add-servidor{
+        width: 100%;
+        height: 51px;
+        background-color: green;
+    }
+
+        .btn-add-servidor{
+            width: 80%;
+            height: 80%;
+            border: none;
+            margin-top: 5px;
+            background: transparent;
+            font-size: 50px;
+            line-height: 0px;
+        }
+
+        .btn-add-servidor:hover{
+            background-color: #25B222;
+        }
+
+        .MenuServidores-add-menu{
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            top: 580px;
+            left: 20px;
+            border-radius: 5px;
+            background-color: #5498A7;
+        }
+
+            .MenuServidores-add-input-container{
+                width: 100%;
+                height: 50%;
+            }
+
+                .MenuServidores-add-input{
+                    width: 90%;
+                    margin-top: 15px;
+                    background: transparent;
+                }
+
+                .MenuServidores-add-input::placeholder{
+                    color: black;
+                }
+
+                .MenuServidores-add-input:focus{
+                    background-color: #7AC3D3;
+                    outline: none;
+                }
+
+            .MenuServidores-add-add-container{
+                width: 100%;
+                height: 100%;
+            }
+
+                .MenuServidores-add-add{
+                    background-color: #22AC44;
+                    border: 1px solid black;
+                    width: 100px;
+                    height: 25px;
+                    border-radius: 5px;
+                    margin-top: 15px;
+                }
+
+                .MenuServidores-add-add:hover{
+                    background-color: #52CC70;
+                }
+
+                .MenuServidores-add-add:focus{
+                    outline: none;
+                    background-color: #52CC70;
+                }
+
+/*#endregion MenuServidores*/
+
+
+/*#region MenuCanalaes*/
+
+.MenuCanales{
+    position: relative;
+    z-index: -1;
+    width: 192.75px;
+    height: 751px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    float: left;
+}
+
+    .MenuCanales-canales{
+        width: 100%;
+        height: calc(100% - 100px);
+        overflow: scroll;
+        background-color: #1D57B2;
+    }
+
+    .MenuCanales-canales::-webkit-scrollbar{
+        display: none;
+    }
+
+        .MenuCanales-lista-canales{
+            width: 100%;
+            height: 100%;
+            list-style-type: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 0px;
+        }
+
+            .MenuCanales-canal-item{
+                width: 100%;
+                height: 55px;
+            }
+
+                .btn-set-selected-canal{
+                    position: relative;
+                    width: 90%;
+                    height: 75%;
+                    top: 12.5%;
+                    border: none;
+                    background-color: #6A72CD;
+                }
+
+                .btn-set-selected-canal:hover{
+                    background-color: #979DE6;
+                }
+
+    .MenuCanales-add-canal{
+        width: 100%;
+        height: 50px;
+        background-color: green;
+    }
+
+        .btn-add-canal{
+            width: 80%;
+            height: 80%;
+            border: none;
+            margin-top: 5px;
+            background: transparent;
+            font-size: 50px;
+            line-height: 0px;
+        }
+
+        .btn-add-canal:hover{
+            background-color: #25B222;
+        }
+
+    .MenuCanales-server-options{
+        width: 100%;
+        height: 51px;
+        background-color: #271485;
+    }
+
+        .btn-server-options{
+            width: 80%;
+            height: 80%;
+            border: none;
+            margin-top: 5px;
+            background: transparent;
+            font-size: 20px;
+            line-height: 0px;
+        }
+
+        .btn-server-options:hover{
+            background-color: #5F46D7;
+        }
+
+
+/*#endregion MenuCanalaes*/
+
+
+/*#region MenuUsuarios*/
+
+.MenuUsuarios{
+    float: left;
+    width: 188px;
+    height: 752px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    background-color: #558ADC;
+    position: relative;
+    z-index: -1;
+}
+
+    .MenuUsuarios-usuarios{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .MenuUsuarios-usuarios::-webkit-scrollbar{
+        display: none;
+    }
+
+        .MenuUsuarios-usuarios-container{
+            width: 100%;
+            border: 1px solid black;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+        }
+
+            .MenuUsuarios-usuarios-title{
+                position: absolute;
+                width: 100%;
+                height: 40px;
+            }
+
+                .MenuUsuarios-titte-h4{
+                    width: 100%;
+                    height: 30px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    line-height: 30px;
+                }
+
+            .MenuUsuarios-lista-usuarios-container{
+                position: relative;
+                width: 100%;
+                height: calc(100% - 40px);
+                top: 40px;
+            }
+
+                .MenuUsuarios-lista-usuarios{
+                    width: 100%;
+                    height: 100%;
+                    list-style-type: none;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    padding-left: 0px;
+                }
+
+                    .MenuUsuarios-usuario-item{
+                        position: relative;
+                        width: 100%;
+                        height: 40px;
+                    }
+
+                        .MenuUsuarios-usuario{
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .MenuUsuarios-usuario:hover{
+                            background-color: #A4C5F7;
+                        }
+
+                            .MenuUsuarios-usuario-icon-container{
+                                margin: 0px;
+                                width: 40px;
+                                height: 100%;
+                                float: left;
+                            }
+
+                                .MenuUsuarios-usuario-icon{
+                                    position: relative;
+                                    width: 80%;
+                                    height: 80%;
+                                    border: 1px solid black;
+                                    border-radius: 50%;
+                                    top: 10%;
+                                    left: 10%;
+                                    background-color: #0D5E7A;
+                                }
+
+                            .MenuUsuarios-usuario-nombre-container{
+                                margin: 0px;
+                                width: calc(100% - 40px);
+                                height: 100%;
+                                float: left;
+                            }
+
+                                .MenuUsuarios-usuario-nombre{
+                                    width: 100%;
+                                    height: 20px;
+                                    margin-top: 7.5px;
+                                    text-align: left;
+                                    padding-left: 10px;
+                                }
+                        
+                        .MenuUsuarios-usuario-selected{
+                            position: absolute;
+                            width: 95%;
+                            height: 85%;
+                            top: 5%;
+                            left: 2%;
+                            border-radius: 5px;
+                            z-index: 0px;
+                        }
+
+                
+            
+
+                
+
+
+/*#endregion MenuUsuarios*/
+
+
+/*#region Chat*/
+
+.Chat{
+    position: relative;
+    width: 800px;
+    height: 802px;
+    border: 1px solid black;
+    border-left: none;
+    float: left;
+    margin-top: -52px;
+}
+
+    .Chat-info{
+        width: 100%;
+        height: 50px;
+        border: 1px solid black;
+        border-left: none;
+        border-top: none;
+        background-color: #2A4AA7;
+    }
+
+        .Chat-canal-nombre{
+            width: 50%;
+            height: 100%;
+            padding: 15px;
+        }
+
+        .Chat-canal-nombre h4{
+            margin: 0px;
+            float: left;
+        }
+
+    .Chat-chat{
+        width: 100%;
+        height: calc(100% - 100px);
+        border: 1px solid black;
+        border-top: none;
+        border-left: none;
+        background-color: #CFE2FF;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+        .Chat-container-mensajes{
+            width: 95%;
+            height: 100%;
+            margin-left: 2.5%;
+        }
+
+            .Chat-lista-mensajes{
+                width: 100%;
+                height: 100%;
+                list-style-type: none;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding-left: 0px;
+            }
+
+                .Chat-mensaje-owner{
+                    width: 100%;
+                    min-height: 50px;
+                    height: auto;
+                }
+
+                    .Chat-mensaje-icon-usuario-container{
+                        width: 50px;
+                        height: 50px;
+                        float: left;
+                    }
+
+                        .Chat-mensaje-icon-usuario{
+                            width: 40px;
+                            height: 40px;
+                            border: 1px solid black;
+                            background-color: #AEE3EE;
+                            border-radius: 50%;
+                            margin-top: 5px;
+                            margin-left: 5px;
+                        }
+
+                    .Chat-mensaje-info-container{
+                        width: calc(100% - 50px);
+                        height: 25px;
+                        float: left;
+                    }
+
+                        .Chat-mensaje-info{
+                            font-size: 12px;
+                            float: left;
+                            margin-top: 3px;
+                            margin-left: 10px;
+                        }
+                        
+                    .Chat-mensaje-mensaje-container{
+                        width: calc(100% - 50px);
+                        min-height: 25px;
+                        height: auto;
+                        float: left;
+                    }
+
+                        .Chat-mensaje-mensaje{
+                            font-size: 17px;
+                            float: left;
+                            margin-top: -5px;
+                            margin-left: 10px;
+                        }
+
+                    /* OTHER */
+
+                    .other{
+                        float: right;
+                    }
+
+    .Chat-barra-chat{
+        width: 100%;
+        height: 51px;
+        margin-top: -2px;
+        background-color: #1D57B2;
+    }
+
+        .Chat-barra-input{
+            width: 90%;
+            height: 100%;
+            float: left;
+        }
+
+            .Chat-input{
+                position: relative;
+                width: 90%;
+                height: 50%;
+                background: transparent;
+                top: 10px;
+                font-size: 20px;
+            }
+
+            .Chat-input:focus{
+                outline: none;
+                background-color: #558ADC;
+            }
+
+        .Chat-enviar-mensaje{
+            width: 10%;
+            height: 100%;
+            float: left;
+        }
+
+            .Chat-btn-send{
+                position: relative;
+                width: 50px;
+                height: 29.11px;
+                top: 10px;
+                left: -10px;
+                border: 0.5px solid black;
+                background-color: #06847C;
+            }
+
+            .Chat-btn-send:hover{
+                background-color: #34D0C6;
+            }
+
+            .Chat-btn-send:focus{
+                outline: none;
+                background-color: #34D0C6;
+            }
+
+
+/*#endregion Chat*/
+
+
+/*#region Chat*/
+
+.ZonaExtra{
+    background-color: #4E94FF;
+    width: 408px;
+    height: 805px;
+    float: left;
+    margin-top: -52px;
+}
+
+    
+
+/*#endregion Chat*/

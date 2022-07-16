@@ -23,6 +23,10 @@ UsuarioRouter.delete('/:idusuario', c.Usuario.DeleteUsuarios);
 // Server Router
 ServidorRouter.post('/join/:idservidor', c.Servidor.JoinServidor);
 
+ServidorRouter.get('/:idservidor/usuario', c.Serv_User.getUsuariosServidores);
+ServidorRouter.get('/usuario/:idusuario', c.Serv_User.getServidoresUsuarios);
+ServidorRouter.post('/:idservidor/usuario', c.Serv_User.addUsuarioServidor);
+
 ServidorRouter.post('/', c.Servidor.AddServidor);
 ServidorRouter.get('/', c.Servidor.GetServidor);
 ServidorRouter.get('/:idservidor', c.Servidor.GetServidor);

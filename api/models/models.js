@@ -8,8 +8,6 @@ import {Servidores_usuario} from './models/Servidores_usuario.js';
 Usuario_amigos.belongsTo(Usuario, {foreignKey: 'id_usuario'});
 Usuario_amigos.belongsTo(Usuario, {foreignKey: 'id_amigo_usuario'});
 
-Servidor.belongsTo(Usuario, {foreignKey: 'owner_servidor'});
-
 Canal.belongsTo(Servidor, {foreignKey: 'id_servidor'});
 
 Mensaje.belongsTo(Canal, {foreignKey: 'id_canal'});
@@ -23,6 +21,8 @@ Servidor.belongsToMany(Usuario, {
     through: Servidores_usuario,
     foreignKey: 'id_servidor'
 });
+
+Servidor.belongsTo(Usuario, {foreignKey: 'owner_servidor'});
 
 export default {
     Usuario: Usuario,

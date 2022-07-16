@@ -13,7 +13,7 @@ export const Usuario = db.define('usuario', {
     contraseña: DataTypes.STRING,
     logged: {
         type: DataTypes.BOOLEAN,
-        defaultValue: false
+        defaultValue: true
     }
 },{
     freezeTableName: true,

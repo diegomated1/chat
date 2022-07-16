@@ -1,21 +1,24 @@
 import './Logeo.css';
 import axios from 'axios';
 import {useState} from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, Navigate } from 'react-router-dom';
 
-const url = "http://localhost:8080/login";
+import useLoggedStatus from '../hooks/useLoggedStatus.js';
 
+const url_login = "http://localhost:8080/login";
+const url_user = "http://localhost:8080/usuario";
 
 function Login(){
     const navigate = useNavigate();
 
+    const isLogged = useLoggedStatus(localStorage.getItem('idusuario'));
     const [credencial, setCredencial] = useState('');
     const [contraseña, setContraseña] = useState('');
 
     const login = async (e)=>{
         e.preventDefault();
         
-        var {data} = await axios.post(url, {
+        var {data} = await axios.post(url_login, {
             credencial: credencial,
             contraseña: contraseña
         });
@@ -24,10 +27,16 @@ function Login(){
             return alert(data.message);
         }
 
+        await axios.put(`${url_user}/${data.data.id_usuario}`, {
+            logged: true
+        });
+
+        localStorage.setItem('idusuario', data.data.id_usuario);
         navigate('/dashboard');
     }
 
     return(
+        (isLogged) ? <Navigate to={'/dashboard'}></Navigate> :
         <div>
             <form onSubmit={login}>
                 <div id='log_container'>

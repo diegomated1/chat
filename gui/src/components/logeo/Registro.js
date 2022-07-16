@@ -1,12 +1,16 @@
 import './Logeo.css';
 import axios from 'axios';
 import {useState} from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, Navigate } from 'react-router-dom';
+
+import useLoggedStatus from '../hooks/useLoggedStatus.js';
 
 const url = "http://localhost:8080/registrarse";
 
 function Registro(){
     const navigate = useNavigate();
+
+    const isLogged = useLoggedStatus(localStorage.getItem('idusuario'));
 
     const [usuario, setUsuario] = useState('');
     const [nombre, setNombre] = useState('');
@@ -16,21 +20,23 @@ function Registro(){
     const registrar = async (e)=>{
         e.preventDefault();
 
-        var res = await axios.post(url ,{
+        var {data} = await axios.post(url ,{
             usuario: usuario,
             nombre: nombre,
             correo: correo,
             contraseña: Contraseña
         });
 
-        if(res.data.error!==0){
-            return alert(res.data.message);
+        if(data.error!==0){
+            return alert(data.message);
         }
         
+        localStorage.setItem('idusuario', data.data.id_usuario);
         navigate('/dashboard');
     }
 
     return(
+        (isLogged) ? <Navigate to={'/dashboard'}></Navigate> :
         <div>
             <form onSubmit={registrar}>
                 <div id='reg_container'>

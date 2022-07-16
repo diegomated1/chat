@@ -30,7 +30,7 @@ const GetMensaje = async (req, res)=>{
                 }, raw: true, nest: true
             });
         }
-
+        
         res.json({data: mensajes});
 
     }catch(err){

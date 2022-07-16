@@ -6,24 +6,23 @@ import Registro from './logeo/Registro.js';
 import Login from './logeo/Login.js';
 import Dashboard from './dashboard/Dashboard.js';
 
-import useLoggedStatus from './logeo/useLoggedStatus.js';
+import useLoggedStatus from './hooks/useLoggedStatus.js';
 
 function App() {
   
-  const isLogged = useLoggedStatus(1);
+  const isLogged = useLoggedStatus(localStorage.getItem('idusuario'));
 
   return (
     <div className="App">
       
       <BrowserRouter>
         <Routes>
-          
-          <Route exact path='/' element={(isLogged===null) ? <p>Loading...</p> : (isLogged) ? <Navigate to={'/dashboard'}/> : <Navigate to={'/login'}/>}/>
+          <Route exact path='/' element={(isLogged) ? <Navigate to={'/dashboard'}/> : <Navigate to={'/login'}/>}/>
 
-          <Route path='registrarse' element={(isLogged) ? <Navigate to={'/dashboard'}/> : <Registro/>}/>
-          <Route path='login' element={(isLogged) ? <Navigate to={'/dashboard'}/> : <Login/>}/>
+          <Route path='registrarse' element={<Registro></Registro>}/>
+          <Route path='login' element={<Login></Login>}/>
 
-          <Route path='dashboard' element={<Dashboard/>}/>
+          <Route path='dashboard' element={<Dashboard></Dashboard>}/>
 
           <Route path="*" element={<div><h1>404</h1></div>}/>
         </Routes>
